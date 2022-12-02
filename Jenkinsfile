@@ -10,7 +10,7 @@ stages {
 stage ('clone-project') {
 steps {
 sh "rm -rf *"
-sh "git clone https://github.com/aakashchavhan/game-of-life.git"
+sh "sudo git clone https://github.com/aakashchavhan/game-of-life.git"
 sh "sudo chmod -R 777 /mnt"
 }
 }
@@ -28,7 +28,7 @@ stage ('deployement using ansible') {
 steps {
 dir ('/mnt/project') {
 sh "sudo chmod 777 *"
-sh "ansible-playbook play-book.yaml"
+sh "sudo ansible-playbook play-book.yaml"
 }
 }
 }
