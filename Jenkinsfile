@@ -10,8 +10,8 @@ stages {
 stage ('clone-project') {
 steps {
 sh "rm -rf *"
-sh "sudo git clone https://github.com/aakashchavhan/game-of-life.git"
 sh "sudo chmod -R 777 /mnt"
+sh "sudo git clone https://github.com/aakashchavhan/game-of-life.git"
 }
 }
 
